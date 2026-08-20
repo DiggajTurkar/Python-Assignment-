@@ -1,0 +1,33 @@
+import matplotlib.pyplot as plt
+
+subjects = ["Python", "DS", "Web", "Math"]
+
+marks = [85, 78, 92, 70]
+
+attendance = [90, 84, 96, 80]
+
+credits = [4, 4, 3, 4]
+
+points = []
+
+for i in range(4): p = marks[i] // 10 points.append(p)
+
+gpa = sum(points[i] * credits[i] for i in range(4)) / sum(credits)
+
+print("Academic Performance")
+
+for i in range(4):
+
+print(subjects[i], marks[i], "%", attendance[i], "%")
+
+|print("GPA =", round(gpa, 2))
+
+plt.bar(subjects, marks)
+
+plt.xlabel("Subjects")
+
+plt.ylabel("Marks")
+
+plt.title("Academic Performance")
+
+plt.show()
